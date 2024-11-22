@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection System</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="welcome-container">
+        <div class="text">
+            <h1 id="header">Fraud Detection System</h1>
+            <div class="content">
+                <p>
+                    The surge in online credit/debit card transactions has led to an upsurge in fraud. 
+                    To combat this, we're employing classification algorithms like Random Forest. 
+                    Using a vast dataset, we'll train and evaluate these models, selecting the one 
+                    with the highest accuracy, precision, and a low false positive rate. 
+                    The chosen model will be saved in pkl format. We'll integrate it into a Flask web 
+                    application for real-time detection. 
+                    This project aims to enhance fraud detection, save costs, and offer real-time protection.
+                </p>
+
+                <h3>Transaction Data Ranges Based on EDA</h3>
+                <p><strong>Fraudulent Transactions:</strong></p>
+                <ul>
+                    <li><strong>step:</strong> Typically between 1 and 743</li>
+                    <li><strong>type:</strong> More likely to be 2, 3, or 4</li>
+                    <li><strong>amount:</strong> Higher amounts, typically above 1,467,967.30</li>
+                    <li><strong>Sendersoldbalance:</strong> Lower balances, typically below 1,649,667.61</li>
+                    <li><strong>Reciversoldbalance:</strong> Can vary, but often lower balances, typically below 544,249.62</li>
+                </ul>
+
+                <p><strong>Non-Fraudulent Transactions:</strong></p>
+                <ul>
+                    <li><strong>step:</strong> Typically between 1 and 718</li>
+                    <li><strong>type:</strong> More likely to be 0 or 1</li>
+                    <li><strong>amount:</strong> Lower amounts, typically below 178,197.04</li>
+                    <li><strong>Sendersoldbalance:</strong> Higher balances, typically above 832,828.71</li>
+                    <li><strong>Reciversoldbalance:</strong> Can vary, but often higher balances, typically above 1,101,420.87</li>
+                </ul>
+
+                <button onclick="window.location.href = '/predict'">Proceed to Predict</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

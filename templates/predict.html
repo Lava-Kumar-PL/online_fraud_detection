@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Fraud Detection</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    
+</head>
+<body class="predict-page">
+    <div class="image">
+        <div class="container">
+            <h1>Payment Fraud Detection</h1>
+            <form action="/predict" method="POST">
+                <div class="form-group">
+                    <label for="step">Step:</label>
+                    <input type="number" id="step" name="step" placeholder="Step" min="1" max="744" required>
+                    <small>Valid range: 1 to 744</small>
+                </div>
+                <div class="form-group">
+                    <label for="type">Transaction Type:</label>
+                    <select id="type" name="type" required>
+                        <option value="0">Online PAYMENT</option>
+                        <option value="1">CASH_IN</option>
+                        <option value="2">DEBIT</option>
+                        <option value="3">CASH_OUT</option>
+                        <option value="4">TRANSFER</option>
+                    </select>
+                    <small>Select transaction type</small>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" placeholder="Amount" min="0" max="50000000" required>
+                    <small>Valid range: 0 to 50,000,000</small>
+                </div>
+                <div class="form-group">
+                    <label for="oldBalanceOrigin">Senders Old Balance:</label>
+                    <input type="number" id="oldBalanceOrigin" name="oldBalanceOrigin" placeholder="Senders Old Balance" min="0" max="5000000" required>
+                    <small>Valid range: 0 to 5,000,000</small>
+                </div>
+                <div class="form-group">
+                    <label for="oldBalanceDestination">Recivers Old Balance:</label>
+                    <input type="number" id="oldBalanceDestination" name="oldBalanceDestination" placeholder="Recivers Old Balance" min="0" max="5000000" required>
+                    <small>Valid range: 0 to 5,000,000</small>
+                </div>
+                <button type="submit">Predict</button>
+                <button type="button" onclick="window.location = '/'">Home</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
