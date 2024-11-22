@@ -44,33 +44,32 @@ This project is a web-based application designed to detect potential fraudulent 
 ### Steps
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/Lava-Kumar-PL/online_fraud_detection.git
-   ```
+    ```bash
+    git clone https://github.com/Lava-Kumar-PL/online_fraud_detection.git
+    ```
 2. Navigate to the project directory:
+    ```bash
+    cd payment-fraud-detection
+    ```
 
-   ```bash
-   cd payment-fraud-detection
-   ```
-
-3. Activate the virtual environment:
-   - On Windows:
-     ```bash
-     env\Scripts\activate
-     ```
-   - On macOS/Linux:
-     ```bash
-     source env/bin/activate
-     ```
-4. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-5. Run the application:
-   ```bash
-   python app.py
-   ```
-6. Open the application in your browser at `http://127.0.0.1:5000`.
+4. Activate the virtual environment:
+    - On Windows:
+        ```bash
+        env\Scripts\activate
+        ```
+    - On macOS/Linux:
+        ```bash
+        source env/bin/activate
+        ```
+5. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+6. Run the application:
+    ```bash
+    python app.py
+    ```
+7. Open the application in your browser at `http://127.0.0.1:5000`.
 
 ---
 
@@ -78,26 +77,36 @@ This project is a web-based application designed to detect potential fraudulent 
 
 1. Navigate to the prediction page.
 2. Enter the required transaction details:
-   - **Step**: Enter a step value between 1 and 744.
-   - **Type**: Choose a transaction type from the dropdown.
-   - **Amount**: Enter a transaction amount within the valid range.
-   - **Old Balance (Origin)**: Input the origin account's balance.
-   - **Old Balance (Destination)**: Input the destination account's balance.
+    - **Step**: Enter a step value between 1 and 744.
+    - **Type**: Choose a transaction type from the dropdown.
+    - **Amount**: Enter a transaction amount within the valid range.
+    - **Senders Old Balance**: Input the origin account's balance.
+    - **Receiver's Old Balance**: Input the destination account's balance.
 3. Click **Predict** to see the fraud detection result.
 
 ---
+## Demo
+<img src="https://github.com/Lava-Kumar-PL/payment_fraud_detection/blob/main/results/PaymentFraudDetection.gif" width="500" />
+
+
 
 ## Screenshots
 
 ### Home Page
-
-![Home Page](https://via.placeholder.com/800x400.png?text=Home+Page+Screenshot)
+<img src="https://github.com/Lava-Kumar-PL/payment_fraud_detection/blob/main/results/frontpage.png" width="500" />
 
 ### Prediction Form
+<img src="https://github.com/Lava-Kumar-PL/payment_fraud_detection/blob/main/results/formPage.png" width="500" />
 
-![Prediction Form](https://via.placeholder.com/800x400.png?text=Prediction+Form+Screenshot)
+### Preticted Fraud
+<img src="https://github.com/Lava-Kumar-PL/payment_fraud_detection/blob/main/results/predictFraud.png" width="500" />
+
+### Predicted Non-Fraud
+<img src="https://github.com/Lava-Kumar-PL/payment_fraud_detection/blob/main/results/predictingNotFraud.png" width="500" />
 
 ---
+
+
 
 ## Acknowledgments
 
@@ -105,3 +114,4 @@ This project is a web-based application designed to detect potential fraudulent 
 - Frontend design contributions by the team.
 
 ---
+
